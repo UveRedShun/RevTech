@@ -1,0 +1,50 @@
+@import '../util/index';
+
+section{
+    padding: 5rem 0;
+    @include respond-below(md) {
+        padding: 3rem 0;
+    }
+}
+
+.sectionAbout, .sectionServices, .sectionBlogs, .sectionContact{
+    background-color: $white;
+}
+
+// ==========================================================================
+// $Members Section
+// ==========================================================================
+
+.bg-members{
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+}
+
+.bg-members::before{
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background: url(image/bg-member.webp) center no-repeat;
+    background-size: cover;
+}
+
+.sectionContact{
+    padding-bottom: 0;
+}
+
+// ==========================================================================
+// $Footer
+// ==========================================================================
+
+footer{
+    background-color: $black;
+    color: $white;
+    z-index: 10;
+    text-align: center;
+    padding-top: 1rem;
+}
